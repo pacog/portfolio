@@ -26,8 +26,10 @@
     "gh-pages": "^0.11.0",
     "html-webpack-plugin": "^2.24.1",
     "ignore-loader": "^0.1.1",
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
-    "webpack": "^1.12.2",
+    "webpack": "^1.13.3",
     "webpack-dev-server": "^1.14.1"
   }
 }
