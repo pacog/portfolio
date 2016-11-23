@@ -1,6 +1,94 @@
 @import 'reset';
 
+$bg-color: #131716;
+$content-width: 600px;
+$content-padding: 20px;
+$text-color: white;
+
+@mixin ubuntu() {
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+@mixin openSans() {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: $bg-color;
+}
+
+h1, h2 {
+  @include ubuntu;
+}
+
+html {
+  @include openSans;
+  color: $text-color;
+  font-size: 16px;
+  @media (min-width: 800px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 20px;
+  }
+}
+
+h1 { font-size: 3.5em; } // 50 ÷ 16 = 3.125
+h2 { font-size: 2.75em;} // 37 ÷ 16 = 2.3125
+h3 { font-size: 2em; } // 28 ÷ 16 = 1.75
+
 #svg-bg {
-  width: 100vw;
-  height: 100vw;
+  width: 100vmax;
+  height: 100vmax;
+  position: absolute;
+  top: 50%;
+  margin-top: -50vmax;
+  left: 0;
+  z-index: 5;
+}
+
+@supports (object-fit: cover) {
+    #svg-bg {
+      object-fit: cover;
+      top: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin-top: 0;
+    }
+}
+
+.title-container {
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 100px;
+
+
+  .title-content {
+    position: relative;
+    z-index: 20;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient( to bottom, transparent, $bg-color);
+  }
+}
+
+.content {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 $content-padding;
+  width: 100%;
 }
