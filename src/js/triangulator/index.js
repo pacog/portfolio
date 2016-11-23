@@ -1,12 +1,8 @@
-class Triangulator {
-  constructor() {
-    console.log('new triangulator');
-  }
-}
+import Triangulator from './triangulator';
 
-export const triangulator = (url) => {
-  if(!url) {
-    throw 'ERROR: triangulator must receive a url';
+export const triangulator = ({ url, svg }) => {
+  if(!url || !svg) {
+    throw 'ERROR: triangulator must receive a url and a svg container';
   }
-  return new Triangulator();
+  return new Triangulator({ url, svg });
 }
