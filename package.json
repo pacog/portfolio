@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Pacog portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --content-base dist/",
+    "test": "npm run build",
+    "build": "rm -rf dist/* && NODE_ENV=production webpack",
+    "deploy": "npm run build && gh-pages dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pacog/portfolio"
+  },
+  "author": "Paco Gomez",
+  "license": "MIT",
+  "homepage": "https://github.com/pacog/portfolio",
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "gh-pages": "^0.11.0",
+    "html-webpack-plugin": "^2.24.1",
+    "ignore-loader": "^0.1.1",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
