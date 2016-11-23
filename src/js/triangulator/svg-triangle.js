@@ -1,3 +1,5 @@
+import Triangle from './triangle';
+
 const NAMESPACE = 'http://www.w3.org/2000/svg';
 const DEFAULT_COLOR = '#a1a1a1';
 
@@ -7,6 +9,8 @@ class SVGTriangle {
     if(!points || (points.length !== 3)) {
       throw 'SVGTriangle: must provide 3 points';
     }
+    this._points = points;
+    this._referenceImage = referenceImage;
     this._element = this._createElementFromPoints(points);
     const color = this._getColorFromImageAtCenter(referenceImage, points);
     this._applyColorToElement(color, this._element);
@@ -14,6 +18,14 @@ class SVGTriangle {
 
   get element() {
     return this._element;
+  }
+
+  divideByTwo() {
+    const [points1, points2] = (new Triangle (this._points)).divideByTwo();
+    return [
+      new SVGTriangle({ points: points1, referenceImage: this._referenceImage }),
+      new SVGTriangle({ points: points2, referenceImage: this._referenceImage })
+    ];
   }
 
   destroy() {
@@ -25,6 +37,7 @@ class SVGTriangle {
 
   _createElementFromPoints(points) {
     const element = document.createElementNS(NAMESPACE, 'polygon');
+    element.setAttribute('stroke-width', '0');
     const pointsDefinition = points
       .map(point => `${point.x},${point.y}`)
       .join(' ');
@@ -37,7 +50,7 @@ class SVGTriangle {
       return DEFAULT_COLOR;
     }
     const center = this._getCenterOf(points);
-    const color = image.pixelAt(center.x, center.y);
+    const color = image.pixelAtPercentage(center.x, center.y);
     return color.toHex();
   }
 
