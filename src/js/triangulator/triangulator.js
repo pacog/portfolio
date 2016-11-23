@@ -1,9 +1,11 @@
 import ImageReader from './image-reader';
 import SVGTriangle from './svg-triangle';
 
-const MAX_ITERATIONS = 2000;
-const GENERATE_EACH = 5; //ms
+const MAX_ITERATIONS = 4000;
 const NEXT_TRIANGLE_RANDOMNESS = 3;
+const START_GENERATE_EACH = 200; //ms
+const END_GENERATE_EACH = 5; //ms
+const DIVISIONS_PER_ITERATION = 10;
 
 class Triangulator {
   constructor({ url, svg }) {
@@ -39,16 +41,28 @@ class Triangulator {
 
   _triangulateNext() {
     if(this.triangles && (this.iterations < MAX_ITERATIONS)) {
-      this.iterations++;
-      const nextTriangle = this._extractNextTriangle();
-      const [firstHalf, secondHalf] = nextTriangle.divideByTwo();
-      nextTriangle.destroy();
-      this._addTriangle(firstHalf);
-      this._addTriangle(secondHalf);
+      for(let i=0; i< DIVISIONS_PER_ITERATION; i++) {
+        this.iterations++;
+        this._makeOneDivision();
+      }
       window.setTimeout(() => {
         window.requestAnimationFrame(() => this._triangulateNext() );
-      }, GENERATE_EACH);
+      }, this._getGenerationTime());
     }
+  }
+
+  _makeOneDivision() {
+    const nextTriangle = this._extractNextTriangle();
+    const [firstHalf, secondHalf] = nextTriangle.divideByTwo();
+    nextTriangle.destroy();
+    this._addTriangle(firstHalf);
+    this._addTriangle(secondHalf);
+  }
+
+  _getGenerationTime() {
+    const generationTime = START_GENERATE_EACH +
+           ((END_GENERATE_EACH - START_GENERATE_EACH)*(this.iterations/MAX_ITERATIONS));
+    return generationTime;
   }
 
   _extractNextTriangle() {
