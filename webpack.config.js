@@ -23,7 +23,8 @@ module.exports = [
     module: {
       loaders: [
         { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
-        { test: /\.(jpg|jpeg|png|gif|svg)$/, loader: 'file', exclude: /node_modules/ }
+        { test: /\.(jpg|jpeg|png|gif|svg)$/, loader: 'file', exclude: /node_modules/ },
+        { test: /\.css$/, loader: "style-loader!css-loader" }
       ]
     }
   }
