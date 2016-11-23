@@ -12,7 +12,7 @@ module.exports = [
 
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.template.ejs',
+        template: './src/index.html',
         inject: 'body',
         options: {
           title: 'pacog portfolio'
