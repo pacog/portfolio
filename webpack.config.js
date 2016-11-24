@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = [
   {
@@ -24,8 +25,10 @@ module.exports = [
       loaders: [
         { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
         // { test: /\.(jpg|jpeg|png|gif|svg)$/, loader: 'file', exclude: /node_modules/ },
-        { test: /\.scss$/, loader: "style-loader!css-loader!sass" }
+        { test: /\.scss$/, loader: "style-loader!css-loader!sass!postcss-loader", exclude: /node_modules/ }
       ]
-    }
+    },
+
+    postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
   }
 ];
