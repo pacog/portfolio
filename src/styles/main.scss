@@ -37,7 +37,6 @@ html {
   @media (min-width: 1200px) {
     font-size: 20px;
   }
-  padding-bottom: 40px;
 }
 
 h1 { font-size: 3em; } // 50 ÷ 16 = 3.125
@@ -235,4 +234,13 @@ a {
 
 .contact-link {
   margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.75em;
+  color: #565657;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid $alt-color;
 }
