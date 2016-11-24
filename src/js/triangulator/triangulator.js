@@ -1,11 +1,11 @@
 import ImageReader from './image-reader';
 import SVGTriangle from './svg-triangle';
 
-const MAX_ITERATIONS = 4000;
-const NEXT_TRIANGLE_RANDOMNESS = 3;
+const MAX_ITERATIONS = 20000;
+const NEXT_TRIANGLE_RANDOMNESS = 2;
 const START_GENERATE_EACH = 200; //ms
-const END_GENERATE_EACH = 5; //ms
-const DIVISIONS_PER_ITERATION = 10;
+const END_GENERATE_EACH = 2; //ms
+const DIVISIONS_PER_ITERATION = 25;
 
 class Triangulator {
   constructor({ url, svg }) {
