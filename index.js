@@ -58,7 +58,17 @@
 
 	__webpack_require__(9);
 
-	var _triangulator = __webpack_require__(10);
+	__webpack_require__(10);
+
+	__webpack_require__(11);
+
+	__webpack_require__(12);
+
+	__webpack_require__(13);
+
+	__webpack_require__(14);
+
+	var _triangulator = __webpack_require__(15);
 
 	var triangulation = (0, _triangulator.triangulator)({
 	  url: './img/bg.jpg',
@@ -447,6 +457,36 @@
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "./apple-touch-icon.png";
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./favicon-32x32.png";
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./favicon-16x16.png";
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./manifest.json";
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./safari-pinned-tab.svg";
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -454,7 +494,7 @@
 	});
 	exports.triangulator = undefined;
 
-	var _triangulator = __webpack_require__(11);
+	var _triangulator = __webpack_require__(16);
 
 	var _triangulator2 = _interopRequireDefault(_triangulator);
 
@@ -471,7 +511,7 @@
 	};
 
 /***/ },
-/* 11 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -484,11 +524,11 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _imageReader = __webpack_require__(12);
+	var _imageReader = __webpack_require__(17);
 
 	var _imageReader2 = _interopRequireDefault(_imageReader);
 
-	var _svgTriangle = __webpack_require__(14);
+	var _svgTriangle = __webpack_require__(19);
 
 	var _svgTriangle2 = _interopRequireDefault(_svgTriangle);
 
@@ -596,7 +636,7 @@
 	exports.default = Triangulator;
 
 /***/ },
-/* 12 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -607,7 +647,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _pixel = __webpack_require__(13);
+	var _pixel = __webpack_require__(18);
 
 	var _pixel2 = _interopRequireDefault(_pixel);
 
@@ -710,7 +750,7 @@
 	exports.default = ImageReader;
 
 /***/ },
-/* 13 */
+/* 18 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -757,7 +797,7 @@
 	exports.default = Pixel;
 
 /***/ },
-/* 14 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -770,7 +810,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _triangle = __webpack_require__(15);
+	var _triangle = __webpack_require__(20);
 
 	var _triangle2 = _interopRequireDefault(_triangle);
 
@@ -863,7 +903,7 @@
 	exports.default = SVGTriangle;
 
 /***/ },
-/* 15 */
+/* 20 */
 /***/ function(module, exports) {
 
 	"use strict";
