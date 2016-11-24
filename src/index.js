@@ -5,6 +5,12 @@ import 'file?name=./img/[name].[ext]!./img/chesire_portfolio.jpg';
 import 'file?name=./img/[name].[ext]!./img/polarsteps_portfolio.png';
 import 'file?name=./img/[name].[ext]!./img/recoreco_portfolio.png';
 
+import 'file?name=./[name].[ext]!./apple-touch-icon.png';
+import 'file?name=./[name].[ext]!./favicon-32x32.png';
+import 'file?name=./[name].[ext]!./favicon-16x16.png';
+import 'file?name=./[name].[ext]!./manifest.json';
+import 'file?name=./[name].[ext]!./safari-pinned-tab.svg';
+
 import { triangulator } from './js/triangulator';
 
 const triangulation = triangulator({
