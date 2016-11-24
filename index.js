@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "/portfolio";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -52,15 +52,18 @@
 
 	__webpack_require__(6);
 
-	var _triangulator = __webpack_require__(7);
+	__webpack_require__(7);
+
+	__webpack_require__(8);
+
+	__webpack_require__(9);
+
+	var _triangulator = __webpack_require__(10);
 
 	var triangulation = (0, _triangulator.triangulator)({
 	  url: './img/bg.jpg',
 	  svg: document.querySelector('#svg-bg')
 	});
-	// import 'file?name=./img/[name].[ext]!./img/bg1.jpg';
-	// import 'file?name=./img/[name].[ext]!./img/bg2.jpg';
-	// import 'file?name=./img/[name].[ext]!./img/bg3.jpg';
 
 /***/ },
 /* 1 */
@@ -78,8 +81,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./main.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./main.scss");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./../../node_modules/postcss-loader/index.js!./main.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./../../node_modules/postcss-loader/index.js!./main.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -97,7 +100,7 @@
 
 
 	// module
-	exports.push([module.id, "/* Reset */\n/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nhtml {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nbody {\n  background: white; }\n\nh1, h2 {\n  font-family: 'Raleway', sans-serif; }\n\nhtml {\n  font-family: 'Roboto', sans-serif;\n  color: #1C140D;\n  font-size: 16px;\n  padding-bottom: 40px; }\n  @media (min-width: 800px) {\n    html {\n      font-size: 18px; } }\n  @media (min-width: 1200px) {\n    html {\n      font-size: 20px; } }\n\nh1 {\n  font-size: 3em; }\n\nh2 {\n  font-size: 2.5em; }\n\nh3 {\n  font-size: 2em; }\n\n#svg-bg {\n  width: 100vmax;\n  height: 100vmax;\n  position: absolute;\n  top: 50%;\n  margin-top: -50vmax;\n  left: 0;\n  z-index: 5; }\n\n@supports (object-fit: cover) {\n  #svg-bg {\n    object-fit: cover;\n    top: auto;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    margin-top: 0; } }\n\n.title-container {\n  height: 75vh;\n  position: relative;\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  padding-bottom: 40px; }\n  .title-container .title-content {\n    position: relative;\n    z-index: 20; }\n  .title-container:before {\n    content: '';\n    display: block;\n    position: absolute;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: linear-gradient(to bottom, transparent, white); }\n\n.content {\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 0 20px;\n  width: 100%; }\n\nh1 {\n  margin-bottom: 0.1em; }\n\nh2 {\n  color: #5bc528; }\n\nh3 {\n  margin-top: 2em;\n  margin-bottom: 1em;\n  position: relative;\n  display: inline-block;\n  color: white;\n  padding: 0 10px; }\n  h3:before {\n    content: '';\n    background: rgba(28, 20, 13, 0.9);\n    position: absolute;\n    z-index: -1;\n    display: block;\n    bottom: -5px;\n    left: -4px;\n    height: 27px;\n    right: -3px; }\n  h3:after {\n    content: '';\n    background: rgba(91, 197, 40, 0.9);\n    position: absolute;\n    z-index: -1;\n    display: block;\n    top: -5px;\n    left: -1px;\n    height: 24px;\n    right: -10px; }\n\na {\n  color: #5bc528; }\n  a:hover {\n    color: #20460e; }\n  a:active {\n    color: #347017; }\n  a:visited {\n    color: #5bc528; }\n  a:hover {\n    color: #20460e; }\n\n.projects {\n  display: flex;\n  flex-wrap: wrap; }\n\n.project {\n  width: 50%;\n  padding: 30px; }\n\n.project-image-container {\n  position: relative; }\n  .project-image-container:before {\n    display: block;\n    content: '';\n    padding-top: 100%; }\n\n.project-link {\n  text-decoration: none;\n  display: block; }\n\n.project-image {\n  object-fit: cover;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.project-title {\n  color: white;\n  border-top: solid 4px #5bc528;\n  padding: 10px 10px;\n  color: #1C140D;\n  font-size: 1.5em;\n  font-family: 'Raleway', sans-serif; }\n  .project-link:hover .project-title {\n    text-decoration: underline;\n    color: #479b1f; }\n\n.project-description {\n  padding: 5px 10px;\n  padding-top: 0;\n  color: #565657;\n  line-height: 1.4; }\n\n.project-tag {\n  display: inline-block;\n  background: rgba(91, 197, 40, 0.7);\n  color: white;\n  font-size: 0.60em;\n  padding: 5px 10px;\n  margin: 5px;\n  border-radius: 5px; }\n\n@media (max-width: 600px) {\n  .project {\n    width: 100%; } }\n\n.contact-link {\n  margin-bottom: 10px; }\n", ""]);
+	exports.push([module.id, "/* Reset */\n/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nhtml {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nbody {\n  background: white; }\n\nh1, h2 {\n  font-family: 'Raleway', sans-serif; }\n\nhtml {\n  font-family: 'Roboto', sans-serif;\n  color: #1C140D;\n  font-size: 16px; }\n  @media (min-width: 800px) {\n    html {\n      font-size: 18px; } }\n  @media (min-width: 1200px) {\n    html {\n      font-size: 20px; } }\n\nh1 {\n  font-size: 3em; }\n\nh2 {\n  font-size: 2.5em; }\n\nh3 {\n  font-size: 2em; }\n\n#svg-bg {\n  width: 100vmax;\n  height: 100vmax;\n  position: absolute;\n  top: 50%;\n  margin-top: -50vmax;\n  left: 0;\n  z-index: 5; }\n\n@supports (object-fit: cover) {\n  #svg-bg {\n    object-fit: cover;\n    top: auto;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    margin-top: 0; } }\n\n.title-container {\n  height: 75vh;\n  position: relative;\n  overflow: hidden;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -ms-flex-pack: end;\n  justify-content: flex-end;\n  padding-bottom: 40px; }\n  .title-container .title-content {\n    position: relative;\n    z-index: 20; }\n  .title-container:before {\n    content: '';\n    display: block;\n    position: absolute;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: linear-gradient(to bottom, transparent, white); }\n\n.content {\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 0 20px;\n  width: 100%; }\n\nh1 {\n  margin-bottom: 0.1em; }\n\nh2 {\n  color: #5bc528; }\n\nh3 {\n  margin-top: 2em;\n  margin-bottom: 1em;\n  position: relative;\n  display: inline-block;\n  color: white;\n  padding: 0 10px; }\n  h3:before {\n    content: '';\n    background: rgba(28, 20, 13, 0.9);\n    position: absolute;\n    z-index: -1;\n    display: block;\n    bottom: -5px;\n    left: -4px;\n    height: 27px;\n    right: -3px; }\n  h3:after {\n    content: '';\n    background: rgba(91, 197, 40, 0.9);\n    position: absolute;\n    z-index: -1;\n    display: block;\n    top: -5px;\n    left: -1px;\n    height: 24px;\n    right: -10px; }\n\na {\n  color: #5bc528; }\n  a:hover {\n    color: #20460e; }\n  a:active {\n    color: #347017; }\n  a:visited {\n    color: #5bc528; }\n  a:hover {\n    color: #20460e; }\n\n.projects {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap; }\n\n.project {\n  width: 50%;\n  padding: 30px; }\n\n.project-image-container {\n  position: relative; }\n  .project-image-container:before {\n    display: block;\n    content: '';\n    padding-top: 100%; }\n\n.project-link {\n  text-decoration: none;\n  display: block; }\n\n.project-image {\n  object-fit: cover;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.project-title {\n  color: white;\n  border-top: solid 4px #5bc528;\n  padding: 10px 0;\n  color: #1C140D;\n  font-size: 1.5em;\n  font-family: 'Raleway', sans-serif; }\n  .project-link:hover .project-title {\n    text-decoration: underline;\n    color: #479b1f; }\n\n.project-description {\n  padding: 5px 0;\n  padding-top: 0;\n  color: #565657;\n  line-height: 1.4;\n  margin-bottom: 5px; }\n\n.project-extra-link {\n  margin-bottom: 15px; }\n\n.project-tag {\n  display: inline-block;\n  background: rgba(91, 197, 40, 0.7);\n  color: white;\n  font-size: 0.60em;\n  padding: 5px 10px;\n  margin-right: 5px;\n  margin-bottom: 5px;\n  border-radius: 5px; }\n\n@media (max-width: 500px) {\n  .project {\n    width: 100%;\n    padding: 30px 0; } }\n\n.contact-link {\n  margin-bottom: 10px; }\n\nfooter {\n  text-align: center;\n  font-size: 0.75em;\n  color: #565657;\n  padding: 20px;\n  margin-top: 40px;\n  border-top: 1px solid #5bc528; }\n", ""]);
 
 	// exports
 
@@ -426,6 +429,24 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "./img/chesire_portfolio.jpg";
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./img/polarsteps_portfolio.png";
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./img/recoreco_portfolio.png";
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -433,7 +454,7 @@
 	});
 	exports.triangulator = undefined;
 
-	var _triangulator = __webpack_require__(8);
+	var _triangulator = __webpack_require__(11);
 
 	var _triangulator2 = _interopRequireDefault(_triangulator);
 
@@ -450,7 +471,7 @@
 	};
 
 /***/ },
-/* 8 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -463,11 +484,11 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _imageReader = __webpack_require__(9);
+	var _imageReader = __webpack_require__(12);
 
 	var _imageReader2 = _interopRequireDefault(_imageReader);
 
-	var _svgTriangle = __webpack_require__(11);
+	var _svgTriangle = __webpack_require__(14);
 
 	var _svgTriangle2 = _interopRequireDefault(_svgTriangle);
 
@@ -575,7 +596,7 @@
 	exports.default = Triangulator;
 
 /***/ },
-/* 9 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -586,7 +607,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _pixel = __webpack_require__(10);
+	var _pixel = __webpack_require__(13);
 
 	var _pixel2 = _interopRequireDefault(_pixel);
 
@@ -689,7 +710,7 @@
 	exports.default = ImageReader;
 
 /***/ },
-/* 10 */
+/* 13 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -736,7 +757,7 @@
 	exports.default = Pixel;
 
 /***/ },
-/* 11 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -749,7 +770,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _triangle = __webpack_require__(12);
+	var _triangle = __webpack_require__(15);
 
 	var _triangle2 = _interopRequireDefault(_triangle);
 
@@ -842,7 +863,7 @@
 	exports.default = SVGTriangle;
 
 /***/ },
-/* 12 */
+/* 15 */
 /***/ function(module, exports) {
 
 	"use strict";
