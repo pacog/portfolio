@@ -536,11 +536,11 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var MAX_ITERATIONS = 4000;
-	var NEXT_TRIANGLE_RANDOMNESS = 3;
+	var MAX_ITERATIONS = 20000;
+	var NEXT_TRIANGLE_RANDOMNESS = 2;
 	var START_GENERATE_EACH = 200; //ms
-	var END_GENERATE_EACH = 5; //ms
-	var DIVISIONS_PER_ITERATION = 10;
+	var END_GENERATE_EACH = 2; //ms
+	var DIVISIONS_PER_ITERATION = 25;
 
 	var Triangulator = function () {
 	  function Triangulator(_ref) {
