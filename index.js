@@ -44,7 +44,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	__webpack_require__(1);
 
@@ -68,11 +68,13 @@
 
 	__webpack_require__(14);
 
-	var _triangulator = __webpack_require__(15);
+	__webpack_require__(15);
+
+	var _triangulator = __webpack_require__(16);
 
 	var triangulation = (0, _triangulator.triangulator)({
-	  url: './img/bg.jpg',
-	  svg: document.querySelector('#svg-bg')
+	  url: "./img/bg.jpg",
+	  svg: document.querySelector("#svg-bg")
 	});
 
 /***/ }),
@@ -451,40 +453,46 @@
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./img/recoreco_portfolio.png";
+	module.exports = __webpack_require__.p + "./img/capac-racer_portfolio.png";
 
 /***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./apple-touch-icon.png";
+	module.exports = __webpack_require__.p + "./img/recoreco_portfolio.png";
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./favicon-32x32.png";
+	module.exports = __webpack_require__.p + "./apple-touch-icon.png";
 
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./favicon-16x16.png";
+	module.exports = __webpack_require__.p + "./favicon-32x32.png";
 
 /***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./manifest.json";
+	module.exports = __webpack_require__.p + "./favicon-16x16.png";
 
 /***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./safari-pinned-tab.svg";
+	module.exports = __webpack_require__.p + "./manifest.json";
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./safari-pinned-tab.svg";
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -494,7 +502,7 @@
 	});
 	exports.triangulator = undefined;
 
-	var _triangulator = __webpack_require__(16);
+	var _triangulator = __webpack_require__(17);
 
 	var _triangulator2 = _interopRequireDefault(_triangulator);
 
@@ -511,7 +519,7 @@
 	};
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -524,11 +532,11 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _imageReader = __webpack_require__(17);
+	var _imageReader = __webpack_require__(18);
 
 	var _imageReader2 = _interopRequireDefault(_imageReader);
 
-	var _svgTriangle = __webpack_require__(19);
+	var _svgTriangle = __webpack_require__(20);
 
 	var _svgTriangle2 = _interopRequireDefault(_svgTriangle);
 
@@ -636,7 +644,7 @@
 	exports.default = Triangulator;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -647,7 +655,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _pixel = __webpack_require__(18);
+	var _pixel = __webpack_require__(19);
 
 	var _pixel2 = _interopRequireDefault(_pixel);
 
@@ -750,7 +758,7 @@
 	exports.default = ImageReader;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -797,7 +805,7 @@
 	exports.default = Pixel;
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -810,7 +818,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _triangle = __webpack_require__(20);
+	var _triangle = __webpack_require__(21);
 
 	var _triangle2 = _interopRequireDefault(_triangle);
 
@@ -903,7 +911,7 @@
 	exports.default = SVGTriangle;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 	"use strict";
