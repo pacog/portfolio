@@ -1,5 +1,5 @@
 import "./styles/main.scss";
-import "./img/bg.jpg";
+import bg from "./img/bg.jpg";
 import "./img/doctortilla_portfolio.png";
 import "./img/chesire_portfolio.jpg";
 import "./img/polarsteps_portfolio.png";
@@ -17,7 +17,7 @@ import { triangulator } from "./js/triangulator";
 import(/* webpackChunkName: "triangulator" */ "./js/triangulator").then(
   ({ triangulator }) => {
     triangulator({
-      url: "./img/bg.jpg",
+      url: bg,
       svg: document.querySelector("#svg-bg"),
     });
   }
