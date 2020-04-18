@@ -1,1 +1,999 @@
-!function(t){var e={};function i(n){if(e[n])return e[n].exports;var o=e[n]={i:n,l:!1,exports:{}};return t[n].call(o.exports,o,o.exports,i),o.l=!0,o.exports}i.m=t,i.c=e,i.d=function(t,e,n){i.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},i.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},i.t=function(t,e){if(1&e&&(t=i(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(i.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)i.d(n,o,function(e){return t[e]}.bind(null,o));return n},i.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return i.d(e,"a",e),e},i.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},i.p="/portfolio",i(i.s=5)}([function(t,e,i){var n=i(1),o=i(2);"string"==typeof(o=o.__esModule?o.default:o)&&(o=[[t.i,o,""]]);var r={insert:"head",singleton:!1},a=(n(o,r),o.locals?o.locals:{});t.exports=a},function(t,e,i){"use strict";var n,o=function(){return void 0===n&&(n=Boolean(window&&document&&document.all&&!window.atob)),n},r=function(){var t={};return function(e){if(void 0===t[e]){var i=document.querySelector(e);if(window.HTMLIFrameElement&&i instanceof window.HTMLIFrameElement)try{i=i.contentDocument.head}catch(t){i=null}t[e]=i}return t[e]}}(),a=[];function s(t){for(var e=-1,i=0;i<a.length;i++)if(a[i].identifier===t){e=i;break}return e}function l(t,e){for(var i={},n=[],o=0;o<t.length;o++){var r=t[o],l=e.base?r[0]+e.base:r[0],c=i[l]||0,h="".concat(l," ").concat(c);i[l]=c+1;var d=s(h),p={css:r[1],media:r[2],sourceMap:r[3]};-1!==d?(a[d].references++,a[d].updater(p)):a.push({identifier:h,updater:f(p,e),references:1}),n.push(h)}return n}function c(t){var e=document.createElement("style"),n=t.attributes||{};if(void 0===n.nonce){var o=i.nc;o&&(n.nonce=o)}if(Object.keys(n).forEach((function(t){e.setAttribute(t,n[t])})),"function"==typeof t.insert)t.insert(e);else{var a=r(t.insert||"head");if(!a)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");a.appendChild(e)}return e}var h,d=(h=[],function(t,e){return h[t]=e,h.filter(Boolean).join("\n")});function p(t,e,i,n){var o=i?"":n.media?"@media ".concat(n.media," {").concat(n.css,"}"):n.css;if(t.styleSheet)t.styleSheet.cssText=d(e,o);else{var r=document.createTextNode(o),a=t.childNodes;a[e]&&t.removeChild(a[e]),a.length?t.insertBefore(r,a[e]):t.appendChild(r)}}function u(t,e,i){var n=i.css,o=i.media,r=i.sourceMap;if(o?t.setAttribute("media",o):t.removeAttribute("media"),r&&btoa&&(n+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(r))))," */")),t.styleSheet)t.styleSheet.cssText=n;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(n))}}var g=null,m=0;function f(t,e){var i,n,o;if(e.singleton){var r=m++;i=g||(g=c(e)),n=p.bind(null,i,r,!1),o=p.bind(null,i,r,!0)}else i=c(e),n=u.bind(null,i,e),o=function(){!function(t){if(null===t.parentNode)return!1;t.parentNode.removeChild(t)}(i)};return n(t),function(e){if(e){if(e.css===t.css&&e.media===t.media&&e.sourceMap===t.sourceMap)return;n(t=e)}else o()}}t.exports=function(t,e){(e=e||{}).singleton||"boolean"==typeof e.singleton||(e.singleton=o());var i=l(t=t||[],e);return function(t){if(t=t||[],"[object Array]"===Object.prototype.toString.call(t)){for(var n=0;n<i.length;n++){var o=s(i[n]);a[o].references--}for(var r=l(t,e),c=0;c<i.length;c++){var h=s(i[c]);0===a[h].references&&(a[h].updater(),a.splice(h,1))}i=r}}}},function(t,e,i){(e=i(3)(!1)).push([t.i,"html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}body{background:#fff}h1,h2{font-family:'Raleway', sans-serif}html{font-family:'Roboto', sans-serif;color:#1C140D;font-size:16px}@media (min-width: 800px){html{font-size:18px}}@media (min-width: 1200px){html{font-size:20px}}h1{font-size:3em}h2{font-size:2.5em}h3{font-size:2em}#svg-bg{width:100vmax;height:100vmax;position:absolute;top:50%;margin-top:-50vmax;left:0;z-index:5}@supports (object-fit: cover){#svg-bg{object-fit:cover;top:auto;left:0;right:0;bottom:0;margin-top:0}}.title-container{height:75vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:40px}.title-container .title-content{position:relative;z-index:20}.title-container:before{content:'';display:block;position:absolute;z-index:10;top:0;left:0;right:0;bottom:0;background:linear-gradient(to bottom, transparent, #fff)}.content{max-width:800px;margin:0 auto;padding:0 20px;width:100%}h1{margin-bottom:0.1em}h2{color:#5bc528}h3{margin-top:2em;margin-bottom:1em;position:relative;display:inline-block;color:white;padding:0 10px}h3:before{content:'';background:rgba(28,20,13,0.9);position:absolute;z-index:-1;display:block;bottom:-5px;left:-4px;height:27px;right:-3px}h3:after{content:'';background:rgba(91,197,40,0.9);position:absolute;z-index:-1;display:block;top:-5px;left:-1px;height:24px;right:-10px}a{color:#5bc528}a:hover{color:#20460e}a:active{color:#347017}a:visited{color:#5bc528}a:hover{color:#20460e}.projects{display:flex;flex-wrap:wrap}.project{width:50%;padding:30px}.project-image-container{position:relative}.project-image-container:before{display:block;content:'';padding-top:100%}.project-link{text-decoration:none;display:block}.project-image{object-fit:cover;width:100%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0}.project-title{color:white;border-top:solid 4px #5bc528;padding:10px 0;color:#1C140D;font-size:1.5em;font-family:'Raleway', sans-serif}.project-link:hover .project-title{text-decoration:underline;color:#479b1f}.project-description{padding:5px 0;padding-top:0;color:#565657;line-height:1.4;margin-bottom:5px}.project-extra-link{margin-bottom:15px}.project-tag{display:inline-block;background:rgba(91,197,40,0.7);color:white;font-size:0.60em;padding:5px 10px;margin-right:5px;margin-bottom:5px;border-radius:5px}@media (max-width: 500px){.project{width:100%;padding:30px 0}}.contact-link{margin-bottom:10px}footer{text-align:center;font-size:0.75em;color:#565657;padding:20px;margin-top:40px;border-top:1px solid #5bc528}footer p{margin-bottom:0.75em}\n",""]),t.exports=e},function(t,e,i){"use strict";t.exports=function(t){var e=[];return e.toString=function(){return this.map((function(e){var i=function(t,e){var i=t[1]||"",n=t[3];if(!n)return i;if(e&&"function"==typeof btoa){var o=(a=n,s=btoa(unescape(encodeURIComponent(JSON.stringify(a)))),l="sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(s),"/*# ".concat(l," */")),r=n.sources.map((function(t){return"/*# sourceURL=".concat(n.sourceRoot||"").concat(t," */")}));return[i].concat(r).concat([o]).join("\n")}var a,s,l;return[i].join("\n")}(e,t);return e[2]?"@media ".concat(e[2]," {").concat(i,"}"):i})).join("")},e.i=function(t,i,n){"string"==typeof t&&(t=[[null,t,""]]);var o={};if(n)for(var r=0;r<this.length;r++){var a=this[r][0];null!=a&&(o[a]=!0)}for(var s=0;s<t.length;s++){var l=[].concat(t[s]);n&&o[l[0]]||(i&&(l[2]?l[2]="".concat(i," and ").concat(l[2]):l[2]=i),e.push(l))}},e}},function(t){t.exports=JSON.parse("{}")},function(t,e,i){"use strict";i.r(e);i(0);var n=i.p+"07b33747b4c2a09fe36e2ff8858c7437.jpg";i.p,i.p,i.p,i.p,i.p,i.p,i.p,i.p,i(4),i.p,i(6);Promise.resolve().then(i.bind(null,6)).then(({triangulator:t})=>{t({url:n,svg:document.querySelector("#svg-bg")})})},function(t,e,i){"use strict";i.r(e),i.d(e,"triangulator",(function(){return h}));var n=class{constructor(t){if(1!==t.height||1!==t.width)throw"Pixel: error, must be created from a 1x1 ImageData";this.r=t.data[0],this.g=t.data[1],this.b=t.data[2],this.a=t.data[3]}toHex(){return`#${this._getHexFromNumber(this.r)}${this._getHexFromNumber(this.g)}${this._getHexFromNumber(this.b)}`}_getHexFromNumber(t){return parseInt(t,10).toString(16).slice(-2)}};var o=class{constructor({url:t,height:e=200,width:i=200}){this.url=t,this.height=e,this.width=i}read(){return this._createAndLoadImage().then(t=>(this._createCanvasFromImage(t),this))}pixelAt(t=0,e=0){if(!this._context)throw"ImageReader: image is still not ready";return t=Math.round(t),t=Math.max(0,t),t=Math.min(this.width,t),e=Math.round(e),e=Math.max(0,e),e=Math.min(this.height,e),new n(this._context.getImageData(t,e,1,1))}pixelAtPercentage(t=0,e=0){const i=t/100*this.width,n=e/100*this.height;return this.pixelAt(i,n)}_createAndLoadImage(){return new Promise((t,e)=>{this.img=new Image,this.img.style.width=this.width+"px",this.img.style.height=this.height+"px",this.img.width=this.width,this.img.height=this.height,this.img.style.objectFit="cover",this.img.onload=()=>{t(this.img)},this.img.onerror=t=>{e(t)},this.img.src=this.url})}_createCanvasFromImage(t){const e=document.createElement("canvas");e.style.display="block",e.width=this.width,e.height=this.height,this._context=e.getContext("2d"),this._context.drawImage(t,0,0)}};class r{constructor(t,e){this.point1=t,this.point2=e}get length(){return Math.sqrt((this.point1.x-this.point2.x)*(this.point1.x-this.point2.x)+(this.point1.y-this.point2.y)*(this.point1.y-this.point2.y))}getMiddlePoint(){return{x:(this.point1.x+this.point2.x)/2,y:(this.point1.y+this.point2.y)/2}}}var a=class{constructor(t){this.points=t,this.segments=[new r(t[0],t[1]),new r(t[1],t[2]),new r(t[2],t[0])]}divideByTwo(){const{longest:t,others:e}=this.getLongestSegment(),i=t.getMiddlePoint();return[[i,e[0].point1,e[0].point2],[i,e[1].point1,e[1].point2]]}getLongestSegment(){let t=0,e=this.segments[0].length;for(let i=0;i<this.segments.length;i++){const n=this.segments[i].length;n>e&&(t=i,e=n)}return{longest:this.segments[t],others:this.segments.filter((e,i)=>i!==t)}}};class s{constructor({points:t,referenceImage:e}){if(!t||3!==t.length)throw"SVGTriangle: must provide 3 points";this._points=t,this._referenceImage=e,this._element=this._createElementFromPoints(t);const i=this._getColorFromImageAtCenter(e,t);this._applyColorToElement(i,this._element)}get element(){return this._element}divideByTwo(){const[t,e]=new a(this._points).divideByTwo();return[new s({points:t,referenceImage:this._referenceImage}),new s({points:e,referenceImage:this._referenceImage})]}destroy(){this._element&&this._element.parentNode&&this._element.parentNode.removeChild(this._element),this._element=null}_createElementFromPoints(t){const e=document.createElementNS("http://www.w3.org/2000/svg","polygon");e.setAttribute("stroke-width","0");const i=t.map(t=>`${t.x},${t.y}`).join(" ");return e.setAttribute("points",i),e}_getColorFromImageAtCenter(t,e){if(!t)return"#a1a1a1";const i=this._getCenterOf(e);return t.pixelAtPercentage(i.x,i.y).toHex()}_applyColorToElement(t,e){e.setAttribute("fill",t)}_getCenterOf(t){return{x:(t[0].x+t[1].x+t[2].x)/3,y:(t[0].y+t[1].y+t[2].y)/3}}}var l=s;var c=class{constructor({url:t,svg:e}){this._svg=e,new o({url:t}).read().then(t=>{this.startTriangulating(t)},e=>{console.warn("Triangulator: error loading "+t)})}startTriangulating(t){this.triangles=[];const e=new l({points:[{x:0,y:0},{x:100,y:0},{x:0,y:100}],referenceImage:t}),i=new l({points:[{x:100,y:100},{x:100,y:0},{x:0,y:100}],referenceImage:t});this._addTriangle(e),this._addTriangle(i),this.iterations=1,this._triangulateNext()}_addTriangle(t){this._svg.appendChild(t.element),this.triangles.push(t)}_triangulateNext(){if(this.triangles&&this.iterations<2e4){for(let t=0;t<25;t++)this.iterations++,this._makeOneDivision();window.setTimeout(()=>{window.requestAnimationFrame(()=>this._triangulateNext())},this._getGenerationTime())}}_makeOneDivision(){const t=this._extractNextTriangle(),[e,i]=t.divideByTwo();t.destroy(),this._addTriangle(e),this._addTriangle(i)}_getGenerationTime(){return 200+this.iterations/2e4*-198}_extractNextTriangle(){const t=Math.min(this.triangles.length,2),e=Math.floor(Math.random()*t);return this.triangles.splice(e,1)[0]}};const h=({url:t,svg:e})=>{if(!t||!e)throw"ERROR: triangulator must receive a url and a svg container";return new c({url:t,svg:e})}}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/portfolio";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	__webpack_require__(1);
+
+	__webpack_require__(5);
+
+	__webpack_require__(6);
+
+	__webpack_require__(7);
+
+	__webpack_require__(8);
+
+	__webpack_require__(9);
+
+	__webpack_require__(10);
+
+	__webpack_require__(11);
+
+	__webpack_require__(12);
+
+	__webpack_require__(13);
+
+	__webpack_require__(14);
+
+	__webpack_require__(15);
+
+	var _triangulator = __webpack_require__(16);
+
+	var triangulation = (0, _triangulator.triangulator)({
+	  url: "./img/bg.jpg",
+	  svg: document.querySelector("#svg-bg")
+	});
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(2);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/index.js!../../node_modules/postcss-loader/index.js!./main.scss", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/index.js!../../node_modules/postcss-loader/index.js!./main.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "/* Reset */\n/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nhtml {\n  box-sizing: border-box; }\n\n*, *:before, *:after {\n  box-sizing: inherit; }\n\nbody {\n  background: white; }\n\nh1, h2 {\n  font-family: 'Raleway', sans-serif; }\n\nhtml {\n  font-family: 'Roboto', sans-serif;\n  color: #1C140D;\n  font-size: 16px; }\n  @media (min-width: 800px) {\n    html {\n      font-size: 18px; } }\n  @media (min-width: 1200px) {\n    html {\n      font-size: 20px; } }\n\nh1 {\n  font-size: 3em; }\n\nh2 {\n  font-size: 2.5em; }\n\nh3 {\n  font-size: 2em; }\n\n#svg-bg {\n  width: 100vmax;\n  height: 100vmax;\n  position: absolute;\n  top: 50%;\n  margin-top: -50vmax;\n  left: 0;\n  z-index: 5; }\n\n@supports (object-fit: cover) {\n  #svg-bg {\n    object-fit: cover;\n    top: auto;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    margin-top: 0; } }\n\n.title-container {\n  height: 75vh;\n  position: relative;\n  overflow: hidden;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -ms-flex-pack: end;\n  justify-content: flex-end;\n  padding-bottom: 40px; }\n  .title-container .title-content {\n    position: relative;\n    z-index: 20; }\n  .title-container:before {\n    content: '';\n    display: block;\n    position: absolute;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: linear-gradient(to bottom, transparent, white); }\n\n.content {\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 0 20px;\n  width: 100%; }\n\nh1 {\n  margin-bottom: 0.1em; }\n\nh2 {\n  color: #5bc528; }\n\nh3 {\n  margin-top: 2em;\n  margin-bottom: 1em;\n  position: relative;\n  display: inline-block;\n  color: white;\n  padding: 0 10px; }\n  h3:before {\n    content: '';\n    background: rgba(28, 20, 13, 0.9);\n    position: absolute;\n    z-index: -1;\n    display: block;\n    bottom: -5px;\n    left: -4px;\n    height: 27px;\n    right: -3px; }\n  h3:after {\n    content: '';\n    background: rgba(91, 197, 40, 0.9);\n    position: absolute;\n    z-index: -1;\n    display: block;\n    top: -5px;\n    left: -1px;\n    height: 24px;\n    right: -10px; }\n\na {\n  color: #5bc528; }\n  a:hover {\n    color: #20460e; }\n  a:active {\n    color: #347017; }\n  a:visited {\n    color: #5bc528; }\n  a:hover {\n    color: #20460e; }\n\n.projects {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap; }\n\n.project {\n  width: 50%;\n  padding: 30px; }\n\n.project-image-container {\n  position: relative; }\n  .project-image-container:before {\n    display: block;\n    content: '';\n    padding-top: 100%; }\n\n.project-link {\n  text-decoration: none;\n  display: block; }\n\n.project-image {\n  object-fit: cover;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.project-title {\n  color: white;\n  border-top: solid 4px #5bc528;\n  padding: 10px 0;\n  color: #1C140D;\n  font-size: 1.5em;\n  font-family: 'Raleway', sans-serif; }\n  .project-link:hover .project-title {\n    text-decoration: underline;\n    color: #479b1f; }\n\n.project-description {\n  padding: 5px 0;\n  padding-top: 0;\n  color: #565657;\n  line-height: 1.4;\n  margin-bottom: 5px; }\n\n.project-extra-link {\n  margin-bottom: 15px; }\n\n.project-tag {\n  display: inline-block;\n  background: rgba(91, 197, 40, 0.7);\n  color: white;\n  font-size: 0.60em;\n  padding: 5px 10px;\n  margin-right: 5px;\n  margin-bottom: 5px;\n  border-radius: 5px; }\n\n@media (max-width: 500px) {\n  .project {\n    width: 100%;\n    padding: 30px 0; } }\n\n.contact-link {\n  margin-bottom: 10px; }\n\nfooter {\n  text-align: center;\n  font-size: 0.75em;\n  color: #565657;\n  padding: 20px;\n  margin-top: 40px;\n  border-top: 1px solid #5bc528; }\n  footer p {\n    margin-bottom: 0.75em; }\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+
+	module.exports = function(list, options) {
+		if(false) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+
+	function createLinkElement(options) {
+		var linkElement = document.createElement("link");
+		linkElement.rel = "stylesheet";
+		insertStyleElement(options, linkElement);
+		return linkElement;
+	}
+
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else if(obj.sourceMap &&
+			typeof URL === "function" &&
+			typeof URL.createObjectURL === "function" &&
+			typeof URL.revokeObjectURL === "function" &&
+			typeof Blob === "function" &&
+			typeof btoa === "function") {
+			styleElement = createLinkElement(options);
+			update = updateLink.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+				if(styleElement.href)
+					URL.revokeObjectURL(styleElement.href);
+			};
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+
+		update(obj);
+
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+
+	var replaceText = (function () {
+		var textStore = [];
+
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+
+		if(media) {
+			styleElement.setAttribute("media", media)
+		}
+
+		if(styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+
+	function updateLink(linkElement, obj) {
+		var css = obj.css;
+		var sourceMap = obj.sourceMap;
+
+		if(sourceMap) {
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+
+		var blob = new Blob([css], { type: "text/css" });
+
+		var oldSrc = linkElement.href;
+
+		linkElement.href = URL.createObjectURL(blob);
+
+		if(oldSrc)
+			URL.revokeObjectURL(oldSrc);
+	}
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./img/bg.jpg";
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./img/doctortilla_portfolio.png";
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./img/chesire_portfolio.jpg";
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./img/polarsteps_portfolio.png";
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./img/capac-racer_portfolio.png";
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./img/recoreco_portfolio.png";
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./apple-touch-icon.png";
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./favicon-32x32.png";
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./favicon-16x16.png";
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./manifest.json";
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./safari-pinned-tab.svg";
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.triangulator = undefined;
+
+	var _triangulator = __webpack_require__(17);
+
+	var _triangulator2 = _interopRequireDefault(_triangulator);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var triangulator = exports.triangulator = function triangulator(_ref) {
+	  var url = _ref.url,
+	      svg = _ref.svg;
+
+	  if (!url || !svg) {
+	    throw 'ERROR: triangulator must receive a url and a svg container';
+	  }
+	  return new _triangulator2.default({ url: url, svg: svg });
+	};
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _imageReader = __webpack_require__(18);
+
+	var _imageReader2 = _interopRequireDefault(_imageReader);
+
+	var _svgTriangle = __webpack_require__(20);
+
+	var _svgTriangle2 = _interopRequireDefault(_svgTriangle);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var MAX_ITERATIONS = 20000;
+	var NEXT_TRIANGLE_RANDOMNESS = 2;
+	var START_GENERATE_EACH = 200; //ms
+	var END_GENERATE_EACH = 2; //ms
+	var DIVISIONS_PER_ITERATION = 25;
+
+	var Triangulator = function () {
+	  function Triangulator(_ref) {
+	    var _this = this;
+
+	    var url = _ref.url,
+	        svg = _ref.svg;
+
+	    _classCallCheck(this, Triangulator);
+
+	    this._svg = svg;
+	    var image = new _imageReader2.default({ url: url });
+	    image.read().then(function (result) {
+	      _this.startTriangulating(result);
+	    }, function (error) {
+	      console.warn('Triangulator: error loading ' + url);
+	    });
+	  }
+
+	  _createClass(Triangulator, [{
+	    key: 'startTriangulating',
+	    value: function startTriangulating(referenceImage) {
+	      this.triangles = [];
+	      var firstTriangle = new _svgTriangle2.default({
+	        points: [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 0, y: 100 }],
+	        referenceImage: referenceImage
+	      });
+	      var secondTriangle = new _svgTriangle2.default({
+	        points: [{ x: 100, y: 100 }, { x: 100, y: 0 }, { x: 0, y: 100 }],
+	        referenceImage: referenceImage
+	      });
+
+	      this._addTriangle(firstTriangle);
+	      this._addTriangle(secondTriangle);
+	      this.iterations = 1;
+	      this._triangulateNext();
+	    }
+	  }, {
+	    key: '_addTriangle',
+	    value: function _addTriangle(triangle) {
+	      this._svg.appendChild(triangle.element);
+	      this.triangles.push(triangle);
+	    }
+	  }, {
+	    key: '_triangulateNext',
+	    value: function _triangulateNext() {
+	      var _this2 = this;
+
+	      if (this.triangles && this.iterations < MAX_ITERATIONS) {
+	        for (var i = 0; i < DIVISIONS_PER_ITERATION; i++) {
+	          this.iterations++;
+	          this._makeOneDivision();
+	        }
+	        window.setTimeout(function () {
+	          window.requestAnimationFrame(function () {
+	            return _this2._triangulateNext();
+	          });
+	        }, this._getGenerationTime());
+	      }
+	    }
+	  }, {
+	    key: '_makeOneDivision',
+	    value: function _makeOneDivision() {
+	      var nextTriangle = this._extractNextTriangle();
+
+	      var _nextTriangle$divideB = nextTriangle.divideByTwo(),
+	          _nextTriangle$divideB2 = _slicedToArray(_nextTriangle$divideB, 2),
+	          firstHalf = _nextTriangle$divideB2[0],
+	          secondHalf = _nextTriangle$divideB2[1];
+
+	      nextTriangle.destroy();
+	      this._addTriangle(firstHalf);
+	      this._addTriangle(secondHalf);
+	    }
+	  }, {
+	    key: '_getGenerationTime',
+	    value: function _getGenerationTime() {
+	      var generationTime = START_GENERATE_EACH + (END_GENERATE_EACH - START_GENERATE_EACH) * (this.iterations / MAX_ITERATIONS);
+	      return generationTime;
+	    }
+	  }, {
+	    key: '_extractNextTriangle',
+	    value: function _extractNextTriangle() {
+	      var randomFrom = Math.min(this.triangles.length, NEXT_TRIANGLE_RANDOMNESS);
+	      var randomIndex = Math.floor(Math.random() * randomFrom);
+	      return this.triangles.splice(randomIndex, 1)[0];
+	    }
+	  }]);
+
+	  return Triangulator;
+	}();
+
+	exports.default = Triangulator;
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _pixel = __webpack_require__(19);
+
+	var _pixel2 = _interopRequireDefault(_pixel);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var ImageReader = function () {
+	  function ImageReader(_ref) {
+	    var url = _ref.url,
+	        _ref$height = _ref.height,
+	        height = _ref$height === undefined ? 200 : _ref$height,
+	        _ref$width = _ref.width,
+	        width = _ref$width === undefined ? 200 : _ref$width;
+
+	    _classCallCheck(this, ImageReader);
+
+	    this.url = url;
+	    this.height = height;
+	    this.width = width;
+	  }
+
+	  _createClass(ImageReader, [{
+	    key: 'read',
+	    value: function read() {
+	      var _this = this;
+
+	      return this._createAndLoadImage().then(function (image) {
+	        _this._createCanvasFromImage(image);
+	        return _this;
+	      });
+	    }
+	  }, {
+	    key: 'pixelAt',
+	    value: function pixelAt() {
+	      var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+	      var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+	      if (!this._context) {
+	        throw 'ImageReader: image is still not ready';
+	      }
+	      x = Math.round(x);
+	      x = Math.max(0, x);
+	      x = Math.min(this.width, x);
+	      y = Math.round(y);
+	      y = Math.max(0, y);
+	      y = Math.min(this.height, y);
+	      return new _pixel2.default(this._context.getImageData(x, y, 1, 1));
+	    }
+	  }, {
+	    key: 'pixelAtPercentage',
+	    value: function pixelAtPercentage() {
+	      var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+	      var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+	      var pixelX = x / 100 * this.width;
+	      var pixelY = y / 100 * this.height;
+	      return this.pixelAt(pixelX, pixelY);
+	    }
+	  }, {
+	    key: '_createAndLoadImage',
+	    value: function _createAndLoadImage() {
+	      var _this2 = this;
+
+	      return new Promise(function (resolve, reject) {
+	        _this2.img = new Image();
+	        _this2.img.style.width = _this2.width + 'px';
+	        _this2.img.style.height = _this2.height + 'px';
+	        _this2.img.width = _this2.width;
+	        _this2.img.height = _this2.height;
+	        _this2.img.style.objectFit = 'cover';
+	        _this2.img.onload = function () {
+	          resolve(_this2.img);
+	        };
+
+	        _this2.img.onerror = function (error) {
+	          reject(error);
+	        };
+
+	        _this2.img.src = _this2.url;
+	      });
+	    }
+	  }, {
+	    key: '_createCanvasFromImage',
+	    value: function _createCanvasFromImage(image) {
+	      var canvas = document.createElement('canvas');
+	      canvas.style.display = 'block';
+	      canvas.width = this.width;
+	      canvas.height = this.height;
+	      this._context = canvas.getContext('2d');
+	      this._context.drawImage(image, 0, 0);
+	    }
+	  }]);
+
+	  return ImageReader;
+	}();
+
+	;
+
+	exports.default = ImageReader;
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Pixel = function () {
+	  function Pixel(imageData) {
+	    _classCallCheck(this, Pixel);
+
+	    if (imageData.height !== 1 || imageData.width !== 1) {
+	      throw 'Pixel: error, must be created from a 1x1 ImageData';
+	    }
+	    this.r = imageData.data[0];
+	    this.g = imageData.data[1];
+	    this.b = imageData.data[2];
+	    this.a = imageData.data[3];
+	  }
+
+	  _createClass(Pixel, [{
+	    key: 'toHex',
+	    value: function toHex() {
+	      var rPart = this._getHexFromNumber(this.r);
+	      var gPart = this._getHexFromNumber(this.g);
+	      var bPart = this._getHexFromNumber(this.b);
+	      return '#' + rPart + gPart + bPart;
+	    }
+	  }, {
+	    key: '_getHexFromNumber',
+	    value: function _getHexFromNumber(number) {
+	      return parseInt(number, 10).toString(16).slice(-2);
+	    }
+	  }]);
+
+	  return Pixel;
+	}();
+
+	exports.default = Pixel;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _triangle = __webpack_require__(21);
+
+	var _triangle2 = _interopRequireDefault(_triangle);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var NAMESPACE = 'http://www.w3.org/2000/svg';
+	var DEFAULT_COLOR = '#a1a1a1';
+
+	var SVGTriangle = function () {
+	  function SVGTriangle(_ref) {
+	    var points = _ref.points,
+	        referenceImage = _ref.referenceImage;
+
+	    _classCallCheck(this, SVGTriangle);
+
+	    if (!points || points.length !== 3) {
+	      throw 'SVGTriangle: must provide 3 points';
+	    }
+	    this._points = points;
+	    this._referenceImage = referenceImage;
+	    this._element = this._createElementFromPoints(points);
+	    var color = this._getColorFromImageAtCenter(referenceImage, points);
+	    this._applyColorToElement(color, this._element);
+	  }
+
+	  _createClass(SVGTriangle, [{
+	    key: 'divideByTwo',
+	    value: function divideByTwo() {
+	      var _divideByTwo = new _triangle2.default(this._points).divideByTwo(),
+	          _divideByTwo2 = _slicedToArray(_divideByTwo, 2),
+	          points1 = _divideByTwo2[0],
+	          points2 = _divideByTwo2[1];
+
+	      return [new SVGTriangle({ points: points1, referenceImage: this._referenceImage }), new SVGTriangle({ points: points2, referenceImage: this._referenceImage })];
+	    }
+	  }, {
+	    key: 'destroy',
+	    value: function destroy() {
+	      if (this._element && this._element.parentNode) {
+	        this._element.parentNode.removeChild(this._element);
+	      }
+	      this._element = null;
+	    }
+	  }, {
+	    key: '_createElementFromPoints',
+	    value: function _createElementFromPoints(points) {
+	      var element = document.createElementNS(NAMESPACE, 'polygon');
+	      element.setAttribute('stroke-width', '0');
+	      var pointsDefinition = points.map(function (point) {
+	        return point.x + ',' + point.y;
+	      }).join(' ');
+	      element.setAttribute('points', pointsDefinition);
+	      return element;
+	    }
+	  }, {
+	    key: '_getColorFromImageAtCenter',
+	    value: function _getColorFromImageAtCenter(image, points) {
+	      if (!image) {
+	        return DEFAULT_COLOR;
+	      }
+	      var center = this._getCenterOf(points);
+	      var color = image.pixelAtPercentage(center.x, center.y);
+	      return color.toHex();
+	    }
+	  }, {
+	    key: '_applyColorToElement',
+	    value: function _applyColorToElement(color, element) {
+	      element.setAttribute('fill', color);
+	    }
+	  }, {
+	    key: '_getCenterOf',
+	    value: function _getCenterOf(points) {
+	      return {
+	        x: (points[0].x + points[1].x + points[2].x) / 3,
+	        y: (points[0].y + points[1].y + points[2].y) / 3
+	      };
+	    }
+	  }, {
+	    key: 'element',
+	    get: function get() {
+	      return this._element;
+	    }
+	  }]);
+
+	  return SVGTriangle;
+	}();
+
+	exports.default = SVGTriangle;
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Segment = function () {
+	  function Segment(point1, point2) {
+	    _classCallCheck(this, Segment);
+
+	    this.point1 = point1;
+	    this.point2 = point2;
+	  }
+
+	  _createClass(Segment, [{
+	    key: "getMiddlePoint",
+	    value: function getMiddlePoint() {
+	      return {
+	        x: (this.point1.x + this.point2.x) / 2,
+	        y: (this.point1.y + this.point2.y) / 2
+	      };
+	    }
+	  }, {
+	    key: "length",
+	    get: function get() {
+	      return Math.sqrt((this.point1.x - this.point2.x) * (this.point1.x - this.point2.x) + (this.point1.y - this.point2.y) * (this.point1.y - this.point2.y));
+	    }
+	  }]);
+
+	  return Segment;
+	}();
+
+	var Triangle = function () {
+	  function Triangle(points) {
+	    _classCallCheck(this, Triangle);
+
+	    this.points = points;
+	    this.segments = [new Segment(points[0], points[1]), new Segment(points[1], points[2]), new Segment(points[2], points[0])];
+	  }
+
+	  _createClass(Triangle, [{
+	    key: "divideByTwo",
+	    value: function divideByTwo() {
+	      var _getLongestSegment = this.getLongestSegment(),
+	          longest = _getLongestSegment.longest,
+	          others = _getLongestSegment.others;
+
+	      var middlePoint = longest.getMiddlePoint();
+	      return [[middlePoint, others[0].point1, others[0].point2], [middlePoint, others[1].point1, others[1].point2]];
+	    }
+	  }, {
+	    key: "getLongestSegment",
+	    value: function getLongestSegment() {
+	      var longestSegment = 0;
+	      var longestSegmentSize = this.segments[0].length;
+	      for (var i = 0; i < this.segments.length; i++) {
+	        var currentLength = this.segments[i].length;
+	        if (currentLength > longestSegmentSize) {
+	          longestSegment = i;
+	          longestSegmentSize = currentLength;
+	        }
+	      }
+
+	      return {
+	        longest: this.segments[longestSegment],
+	        others: this.segments.filter(function (segment, index) {
+	          return index !== longestSegment;
+	        })
+	      };
+	    }
+	  }]);
+
+	  return Triangle;
+	}();
+
+	exports.default = Triangle;
+
+/***/ })
+/******/ ]);
