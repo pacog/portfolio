@@ -1,34 +1,50 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const autoprefixer = require("autoprefixer");
 
 module.exports = [
   {
-    entry: './src/index.js',
+    entry: "./src/index.js",
 
     output: {
-      filename: 'index.js',
-      path: 'dist',
-      publicPath: (process.env.NODE_ENV === 'production')? '/portfolio' : '/'
+      filename: "index.js",
+      path: "/dist",
+      publicPath: process.env.NODE_ENV === "production" ? "/portfolio" : "/",
     },
 
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html',
-        inject: 'body',
+        template: "./src/index.html",
+        inject: "body",
         options: {
-          title: 'pacog portfolio'
-        }
-      })
+          title: "pacog portfolio",
+        },
+      }),
     ],
 
     module: {
-      loaders: [
-        { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
+      rules: [
+        { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
         // { test: /\.(jpg|jpeg|png|gif|svg)$/, loader: 'file', exclude: /node_modules/ },
-        { test: /\.scss$/, loader: "style-loader!css-loader!sass!postcss-loader", exclude: /node_modules/ }
-      ]
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            // Creates `style` nodes from JS strings
+            "style-loader",
+            // Translates CSS into CommonJS
+            "css-loader",
+            // Compiles Sass to CSS
+            "sass-loader",
+          ],
+        },
+        {
+          test: /\.(png|jpe?g|gif|svg)$/i,
+          use: [
+            {
+              loader: "file-loader",
+            },
+          ],
+        },
+      ],
     },
-
-    postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
-  }
+  },
 ];
