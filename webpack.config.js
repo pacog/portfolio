@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const autoprefixer = require("autoprefixer");
 
 module.exports = [
   {
@@ -15,9 +14,7 @@ module.exports = [
       new HtmlWebpackPlugin({
         template: "./src/index.html",
         inject: "body",
-        options: {
-          title: "pacog portfolio",
-        },
+        title: "pacog portfolio",
       }),
     ],
 
@@ -41,6 +38,9 @@ module.exports = [
           use: [
             {
               loader: "file-loader",
+              options: {
+                esModule: false,
+              },
             },
           ],
         },
