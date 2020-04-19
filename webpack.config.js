@@ -7,7 +7,7 @@ module.exports = [
     output: {
       filename: "index.js",
       path: __dirname + "/dist",
-      publicPath: process.env.NODE_ENV === "production" ? "/portfolio" : "/",
+      publicPath: process.env.NODE_ENV === "production" ? "/portfolio/" : "/",
     },
 
     plugins: [
