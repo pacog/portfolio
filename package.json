@@ -1,47 +1,23 @@
 {
-  "private": true,
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Pacog portfolio",
-  "main": "index.js",
-  "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --content-base dist/",
-    "test": "npm run build",
-    "build": "rm -rf dist/* && NODE_ENV=production webpack",
-    "deploy": "npm run build && gh-pages -d dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pacog/portfolio"
-  },
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "not IE_Mob 11",
-    "maintained node versions"
-  ],
-  "author": "Paco Gomez",
-  "license": "MIT",
-  "homepage": "https://github.com/pacog/portfolio",
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.5.2",
-    "eslint": "^6.8.0",
-    "fibers": "^4.0.2",
-    "file-loader": "^6.0.0",
-    "gh-pages": "^2.2.0",
-    "html-webpack-plugin": "^4.2.0",
-    "ignore-loader": "^0.1.1",
-    "node-sass": "^4.13.1",
-    "postcss-loader": "^3.0.0",
-    "sass": "^1.26.3",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.4",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
-  }
+    "private": true,
+    "name": "portfolio",
+    "version": "2.0.0",
+    "description": "Pacog portfolio",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pacog/portfolio"
+    },
+    "author": "Paco Gomez",
+    "license": "MIT",
+    "homepage": "https://github.com/pacog/portfolio",
+    "devDependencies": {
+        "prettier": "2.8.7",
+        "vite": "^4.2.0"
+    }
 }
