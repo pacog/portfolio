@@ -1,22 +1,23 @@
 {
-  "private": true,
-  "name": "portfolio",
-  "version": "2.0.0",
-  "description": "Pacog portfolio",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pacog/portfolio"
-  },
-  "author": "Paco Gomez",
-  "license": "MIT",
-  "homepage": "https://github.com/pacog/portfolio",
-  "devDependencies": {
-    "vite": "^4.2.0"
-  }
+    "private": true,
+    "name": "portfolio",
+    "version": "2.0.0",
+    "description": "Pacog portfolio",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pacog/portfolio"
+    },
+    "author": "Paco Gomez",
+    "license": "MIT",
+    "homepage": "https://github.com/pacog/portfolio",
+    "devDependencies": {
+        "prettier": "2.8.7",
+        "vite": "^4.2.0"
+    }
 }
