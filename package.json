@@ -18,6 +18,6 @@
     "homepage": "https://github.com/pacog/portfolio",
     "devDependencies": {
         "prettier": "2.8.7",
-        "vite": "^4.2.0"
+        "vite": "^4.2.3"
     }
 }
